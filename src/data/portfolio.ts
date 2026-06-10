@@ -13,7 +13,7 @@ export const portfolioData = {
       cv: 'Descargar CV',
       contact: 'Contactarme'
     },
-    cvUrl: '[AGREGAR_URL_CV]' // Reemplazar con URL del CV PDF
+    cvUrl: '/cv-samuel-ortiz.pdf' // Hoja de vida en PDF
   },
 
   about: {

@@ -1,11 +1,12 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { motion } from 'framer-motion'
-import { Section, Card, Button } from '../components'
+import { Section, Card, Button, Modal } from '../components'
 import { portfolioData } from '../data/portfolio'
 import { ArrowUpRight } from 'lucide-react'
 
 export const ProjectsSection: React.FC = () => {
   const { projects } = portfolioData
+  const [selectedImage, setSelectedImage] = useState<{ src: string; alt: string } | null>(null)
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -24,6 +25,12 @@ export const ProjectsSection: React.FC = () => {
 
   return (
     <Section id="proyectos" title="Proyectos" subtitle="Una selección de mis trabajos académicos y profesionales">
+      <Modal
+        isOpen={!!selectedImage}
+        onClose={() => setSelectedImage(null)}
+        imageSrc={selectedImage?.src || ''}
+        imageAlt={selectedImage?.alt || ''}
+      />
       <motion.div
         className="space-y-12 lg:space-y-20"
         variants={containerVariants}
@@ -41,23 +48,19 @@ export const ProjectsSection: React.FC = () => {
             <Card className="overflow-hidden">
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-0">
                 {/* Image */}
-                <motion.div
-                  className="relative h-64 lg:h-80 overflow-hidden bg-gradient-to-br from-bg-secondary to-bg-tertiary flex items-center justify-center"
+                <motion.button
+                  onClick={() => setSelectedImage({ src: project.image, alt: project.title })}
+                  className="relative h-64 md:h-80 lg:h-full overflow-hidden bg-gradient-to-br from-bg-secondary to-bg-tertiary flex items-center justify-center cursor-pointer hover:cursor-pointer focus:outline-none"
                   whileHover={{ scale: 1.05 }}
                   transition={{ duration: 0.4 }}
                 >
                   <img
                     src={project.image}
                     alt={project.title}
-                    className="w-full h-full object-cover opacity-50 group-hover:opacity-70 transition-opacity"
+                    className="w-full h-full object-cover opacity-70 group-hover:opacity-85 transition-opacity"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-bg-tertiary via-transparent to-transparent pointer-events-none" />
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="text-center opacity-70">
-                      <p className="text-text-secondary text-sm">[Imagen del proyecto]</p>
-                    </div>
-                  </div>
-                </motion.div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-bg-tertiary/80 via-transparent to-transparent pointer-events-none" />
+                </motion.button>
 
                 {/* Content */}
                 <div className="p-8 lg:p-12 flex flex-col justify-between">
@@ -140,7 +143,7 @@ export const ProjectsSection: React.FC = () => {
                         href={project.projectUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center px-8 py-4 text-lg font-semibold bg-primary hover:bg-primary-light text-text-primary shadow-glow-blue hover:shadow-glow-blue-lg rounded-lg transition-all duration-300"
+                        className="inline-flex items-center px-8 py-4 text-lg font-semibold bg-primary hover:bg-primary-light text-text-primary shadow-lg shadow-primary/20 hover:shadow-primary/40 rounded-lg transition-all duration-300"
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
                       >
