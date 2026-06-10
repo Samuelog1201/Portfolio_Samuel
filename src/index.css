@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #050816;
+  color: #FFFFFF;
+  font-family: 'Space Grotesk', 'Inter', system-ui, sans-serif;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #050816;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2563EB;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #3B82F6;
+}
+
+/* Smooth selection */
+::selection {
+  background-color: #2563EB;
+  color: #FFFFFF;
+}
+
+::-moz-selection {
+  background-color: #2563EB;
+  color: #FFFFFF;
+}
+
+/* Utility classes */
+.glass {
+  background: rgba(11, 17, 32, 0.7);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, #2563EB 0%, #60A5FA 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.glow-effect {
+  box-shadow: 0 0 20px rgba(37, 99, 235, 0.15);
+}
+
+.glow-effect-lg {
+  box-shadow: 0 0 40px rgba(37, 99, 235, 0.2);
+}
+
+.border-gradient {
+  position: relative;
+  background: linear-gradient(#050816, #050816) padding-box;
+  border: 1px solid transparent;
+  border-image: linear-gradient(135deg, #2563EB, #60A5FA) 1;
+}

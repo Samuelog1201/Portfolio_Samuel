@@ -1,0 +1,106 @@
+QUICK START - Portfolio Samuel
+==============================
+
+1. INSTALAR Y EJECUTAR
+
+cd "C:\Users\samue\Downloads\Portfolio_Samuel"
+npm install
+npm run dev
+
+El sitio se abrirá en: http://localhost:3000
+
+---
+
+2. EDITAR CONTENIDO
+
+Abre: src/data/portfolio.ts
+
+Todos los textos, proyectos, habilidades y contacto están aquí.
+Guarda cambios y verás actualizaciones en tiempo real.
+
+---
+
+3. AGREGAR FOTOS
+
+Para la foto de perfil:
+- Coloca la imagen en public/profile.jpg
+- En src/sections/HeroSection.tsx línea ~80:
+  Cambia: <p className="text-text-secondary text-center relative z-10">[Foto profesional]</p>
+  Por:    <img src="/profile.jpg" alt="Samuel" className="w-full h-full object-cover" />
+
+Para fotos de proyectos:
+- Actualiza los URLs en src/data/portfolio.ts
+- Puedes usar imágenes locales o URLs externas
+
+---
+
+4. PERSONALIZAR COLORES
+
+Abre: tailwind.config.js
+
+Busca la sección "colors" y modifica los valores hexadecimales.
+Todos los colores están comentados y organizados.
+
+---
+
+5. COMPILAR PARA PRODUCCIÓN
+
+npm run build
+
+Se creará carpeta 'dist' lista para deploy.
+
+---
+
+6. ELEMENTOS A COMPLETAR
+
+ANTES DE PUBLICAR, REEMPLAZA:
+
+• Email: samuel@example.com
+• URLs de LinkedIn, GitHub, Behance
+• Descripciones en EXPERIENCE (líneas 183-190)
+• Foto de perfil placeholder
+• Verificar todos los URLs de proyectos
+• Revisar que los casos de estudio apunten a URLs reales
+
+---
+
+7. ESTRUCTURA DE CARPETAS
+
+src/
+  ├── components/     Componentes reutilizables (Button, Card, Navbar, etc)
+  ├── sections/       Cada sección de la página
+  ├── data/          Todos los contenidos y datos
+  └── App.tsx        Archivo principal
+
+---
+
+8. DEPLOY
+
+VERCEL (Recomendado):
+npm install -g vercel
+vercel
+
+NETLIFY:
+npm install -g netlify-cli
+netlify deploy --prod --dir=dist
+
+---
+
+Preguntas frecuentes:
+
+P: ¿Cómo cambio el nombre del sitio?
+R: En index.html, línea 12, cambia <title>
+
+P: ¿Cómo agrego una nueva sección?
+R: Crea archivo en src/sections/, importa en App.tsx
+
+P: ¿Cómo cambio las animaciones?
+R: Edita el valor "duration" en las propiedades motion de cada componente
+
+P: Las animaciones van muy rápido/lento
+R: En tailwind.config.js, ajusta los keyframes y durations
+
+---
+
+Última revisión: Junio 2026
+Portfolio completamente funcional y listo para personalizar
