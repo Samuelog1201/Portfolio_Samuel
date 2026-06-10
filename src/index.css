@@ -79,3 +79,39 @@ body {
   border: 1px solid transparent;
   border-image: linear-gradient(135deg, #2563EB, #60A5FA) 1;
 }
+
+/* Refinamientos visuales */
+input:focus,
+textarea:focus {
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+/* Mejora de contraste en textos secundarios */
+p {
+  color: #94A3B8;
+}
+
+/* Animaciones suaves */
+button,
+a {
+  transition: all 0.3s ease;
+}
+
+/* Mejora en legibilidad de links */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover {
+  color: #60A5FA;
+}
+
+/* Estilos mejorados para listas */
+ul, ol {
+  margin-left: 1.5rem;
+}
+
+li {
+  margin-bottom: 0.5rem;
+}

@@ -121,15 +121,15 @@ export const ContactSection: React.FC = () => {
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-            <Card className="p-8 h-full">
-              <form onSubmit={handleSubmit} className="space-y-6">
+            <Card className="p-10 h-full hover:border-primary/50">
+              <form onSubmit={handleSubmit} className="space-y-7">
                 {/* Name */}
                 <motion.div
                   initial={{ opacity: 0, y: 10 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.1 }}
                 >
-                  <label className="block text-sm font-semibold text-text-primary mb-2">
+                  <label className="block text-sm font-semibold text-text-primary mb-3">
                     Nombre
                   </label>
                   <input
@@ -150,7 +150,7 @@ export const ContactSection: React.FC = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.15 }}
                 >
-                  <label className="block text-sm font-semibold text-text-primary mb-2">
+                  <label className="block text-sm font-semibold text-text-primary mb-3">
                     Email
                   </label>
                   <input
@@ -171,7 +171,7 @@ export const ContactSection: React.FC = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.2 }}
                 >
-                  <label className="block text-sm font-semibold text-text-primary mb-2">
+                  <label className="block text-sm font-semibold text-text-primary mb-3">
                     Mensaje
                   </label>
                   <textarea
@@ -190,8 +190,9 @@ export const ContactSection: React.FC = () => {
                   initial={{ opacity: 0, y: 10 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.25 }}
+                  className="pt-2"
                 >
-                  <Button type="submit" variant="primary" size="lg" className="w-full">
+                  <Button type="submit" variant="primary" size="lg" className="w-full font-semibold">
                     <Send className="w-5 h-5 mr-2 inline" />
                     Enviar mensaje
                   </Button>

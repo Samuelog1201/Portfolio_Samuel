@@ -135,10 +135,28 @@ export const ProjectsSection: React.FC = () => {
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.35 }}
                   >
-                    <Button variant="primary">
-                      Ver caso de estudio
-                      <ArrowUpRight className="w-5 h-5 ml-2 inline" />
-                    </Button>
+                    {project.projectUrl && project.projectUrl !== '[AGREGAR_URL_TUPLATA]' && project.projectUrl !== '[AGREGAR_URL_UBER_DESIGN_SYSTEM]' && project.projectUrl !== '[AGREGAR_URL_PLANEA]' ? (
+                      <motion.a
+                        href={project.projectUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center px-8 py-4 text-lg font-semibold bg-primary hover:bg-primary-light text-text-primary shadow-glow-blue hover:shadow-glow-blue-lg rounded-lg transition-all duration-300"
+                        whileHover={{ scale: 1.05 }}
+                        whileTap={{ scale: 0.95 }}
+                      >
+                        Ver caso de estudio
+                        <ArrowUpRight className="w-5 h-5 ml-2" />
+                      </motion.a>
+                    ) : (
+                      <motion.button
+                        disabled
+                        className="inline-flex items-center px-8 py-4 text-lg font-semibold bg-bg-tertiary text-text-secondary rounded-lg opacity-50 cursor-not-allowed"
+                        whileHover={{ scale: 1 }}
+                      >
+                        Próximamente
+                        <ArrowUpRight className="w-5 h-5 ml-2" />
+                      </motion.button>
+                    )}
                   </motion.div>
                 </div>
               </div>

@@ -19,7 +19,7 @@ export const Section: React.FC<SectionProps> = ({
   return (
     <motion.section
       id={id}
-      className={`py-20 lg:py-32 ${className}`}
+      className={`py-24 lg:py-40 ${className}`}
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ duration: 0.6 }}
@@ -28,7 +28,7 @@ export const Section: React.FC<SectionProps> = ({
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {(title || subtitle) && (
           <motion.div
-            className="mb-12 lg:mb-20"
+            className="mb-16 lg:mb-24"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
@@ -40,7 +40,7 @@ export const Section: React.FC<SectionProps> = ({
               </h2>
             )}
             {subtitle && (
-              <p className="text-lg text-text-secondary max-w-3xl">
+              <p className="text-lg text-text-secondary max-w-3xl leading-relaxed">
                 {subtitle}
               </p>
             )}

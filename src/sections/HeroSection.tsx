@@ -30,6 +30,28 @@ const item = {
 export const HeroSection: React.FC = () => {
   const { hero } = portfolioData
 
+  const handleScrollToProjects = () => {
+    const element = document.getElementById('proyectos')
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' })
+    }
+  }
+
+  const handleDownloadCV = () => {
+    if (hero.cvUrl && !hero.cvUrl.includes('[AGREGAR_URL_CV]')) {
+      window.open(hero.cvUrl, '_blank')
+    } else {
+      alert('El CV aún no está configurado. Por favor, agrega la URL en data/portfolio.ts')
+    }
+  }
+
+  const handleScrollToContact = () => {
+    const element = document.getElementById('contacto')
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' })
+    }
+  }
+
   return (
     <section
       id="inicio"
@@ -85,15 +107,27 @@ export const HeroSection: React.FC = () => {
               variants={item}
               className="flex flex-wrap gap-4 pt-4"
             >
-              <Button variant="primary" size="lg">
+              <Button
+                variant="primary"
+                size="lg"
+                onClick={handleScrollToProjects}
+              >
                 <ArrowRight className="w-5 h-5 mr-2 inline" />
                 {hero.cta.projects}
               </Button>
-              <Button variant="outline" size="lg">
+              <Button
+                variant="outline"
+                size="lg"
+                onClick={handleDownloadCV}
+              >
                 <Download className="w-5 h-5 mr-2 inline" />
                 {hero.cta.cv}
               </Button>
-              <Button variant="secondary" size="lg">
+              <Button
+                variant="secondary"
+                size="lg"
+                onClick={handleScrollToContact}
+              >
                 <Mail className="w-5 h-5 mr-2 inline" />
                 {hero.cta.contact}
               </Button>
@@ -115,19 +149,15 @@ export const HeroSection: React.FC = () => {
               {/* Outer glow */}
               <div className="absolute inset-0 rounded-2xl border border-primary/30 shadow-glow-blue-lg" />
 
-              {/* Image container */}
-              <div className="absolute inset-0 rounded-2xl overflow-hidden bg-gradient-to-br from-primary/20 to-primary-lighter/10 border border-primary/20">
-                <div className="w-full h-full bg-gradient-to-br from-bg-secondary to-bg-tertiary flex items-center justify-center relative">
-                  {/* Placeholder gradient */}
-                  <div className="absolute inset-0 bg-gradient-radial opacity-20" />
-                  <div className="w-full h-full bg-gradient-to-br from-primary/10 via-transparent to-primary-lighter/5" />
-
-                  {/* Placeholder text */}
-                  <p className="text-text-secondary text-center relative z-10">
-                    [Foto profesional]
-                  </p>
-                </div>
-              </div>
+               {/* Image container */}
+               <div className="absolute inset-0 rounded-2xl overflow-hidden bg-gradient-to-br from-primary/20 to-primary-lighter/10 border border-primary/20">
+                 <img
+                   src="/profile.jpg"
+                   alt="Samuel Ortiz - Product Designer"
+                   className="w-full h-full object-cover"
+                 />
+                 <div className="absolute inset-0 bg-gradient-to-t from-bg-tertiary via-transparent to-transparent" />
+               </div>
 
               {/* Decorative elements */}
               <motion.div

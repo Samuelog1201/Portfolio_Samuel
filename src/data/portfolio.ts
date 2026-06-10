@@ -12,7 +12,8 @@ export const portfolioData = {
       projects: 'Ver proyectos',
       cv: 'Descargar CV',
       contact: 'Contactarme'
-    }
+    },
+    cvUrl: '[AGREGAR_URL_CV]' // Reemplazar con URL del CV PDF
   },
 
   about: {
@@ -97,7 +98,7 @@ export const portfolioData = {
       roles: ['UX Research', 'User Interviews', 'Product Design', 'UI Design', 'Prototyping'],
       tools: ['Figma', 'Miro', 'Notion'],
       image: 'https://res.cloudinary.com/doczdljac/image/upload/v1781079859/tuplat_qvzjko.png',
-      caseStudy: '/case-studies/tuplata'
+      projectUrl: '[AGREGAR_URL_TUPLATA]' // Reemplazar con URL de Behance, Figma o caso de estudio
     },
     {
       id: 2,
@@ -107,7 +108,7 @@ export const portfolioData = {
       roles: ['UI Design', 'Design Systems', 'Accessibility', 'Documentation'],
       tools: ['Figma'],
       image: 'https://res.cloudinary.com/doczdljac/image/upload/v1781079442/descarga_zburhw.png',
-      caseStudy: '/case-studies/design-system'
+      projectUrl: '[AGREGAR_URL_UBER_DESIGN_SYSTEM]' // Reemplazar con URL de Figma, Behance o portfolio
     },
     {
       id: 3,
@@ -117,7 +118,7 @@ export const portfolioData = {
       roles: ['Research', 'Video Editing', 'Communication', 'Digital Content'],
       tools: ['Adobe Premiere', 'Figma', 'Notion'],
       image: 'https://res.cloudinary.com/doczdljac/image/upload/v1781079864/Planea_keknws.png',
-      caseStudy: '/case-studies/planea'
+      projectUrl: '[AGREGAR_URL_PLANEA]' // Reemplazar con URL de YouTube, Vimeo o portafolio
     }
   ],
 

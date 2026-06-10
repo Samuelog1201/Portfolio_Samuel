@@ -63,8 +63,8 @@ export const Navbar: React.FC = () => {
               onClick={() => handleNavClick(section.id)}
               className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 ${
                 activeSection === section.id
-                  ? 'text-primary bg-primary/10'
-                  : 'text-text-secondary hover:text-text-primary'
+                  ? 'text-primary bg-primary/15 border border-primary/30'
+                  : 'text-text-secondary hover:text-primary hover:bg-primary/5'
               }`}
               whileHover={{ y: -2 }}
               whileTap={{ scale: 0.95 }}

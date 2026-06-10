@@ -23,10 +23,10 @@ export const AboutSection: React.FC = () => {
 
   return (
     <Section id="sobre" title={about.title}>
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12">
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-16">
         {/* Main content */}
         <motion.div
-          className="lg:col-span-2 space-y-6"
+          className="lg:col-span-2 space-y-8"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
@@ -54,11 +54,11 @@ export const AboutSection: React.FC = () => {
                 key={index}
                 variants={itemVariants}
               >
-                <Card variant="glass" className="p-6 text-center">
-                  <div className="text-2xl lg:text-3xl font-bold gradient-text mb-2">
+                <Card variant="glass" className="p-6 text-center hover:border-primary/50">
+                  <div className="text-2xl lg:text-3xl font-bold gradient-text mb-3">
                     {metric.value}
                   </div>
-                  <div className="text-sm text-text-secondary">
+                  <div className="text-sm text-text-secondary font-medium">
                     {metric.label}
                   </div>
                 </Card>

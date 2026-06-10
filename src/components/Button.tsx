@@ -22,12 +22,12 @@ export const Button: React.FC<ButtonProps> = ({
   disabled = false,
   href
 }) => {
-  const baseStyles = 'font-semibold transition-all duration-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary'
+  const baseStyles = 'font-semibold transition-all duration-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary cursor-pointer'
 
   const variants = {
-    primary: 'bg-primary hover:bg-primary-light text-text-primary shadow-glow-blue hover:shadow-glow-blue-lg',
-    secondary: 'bg-bg-tertiary hover:bg-bg-secondary text-text-primary border border-border-color',
-    outline: 'border border-primary text-primary hover:bg-primary hover:text-text-primary'
+    primary: 'bg-primary hover:bg-primary-light text-white shadow-lg shadow-primary/20 hover:shadow-primary/40 active:scale-95',
+    secondary: 'bg-bg-tertiary hover:bg-bg-secondary text-text-primary border border-border-color hover:border-primary/50',
+    outline: 'border border-primary text-primary hover:bg-primary/10 hover:border-primary-light'
   }
 
   const sizes = {
