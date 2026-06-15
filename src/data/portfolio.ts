@@ -98,27 +98,27 @@ export const portfolioData = {
       roles: ['UX Research', 'User Interviews', 'Product Design', 'UI Design', 'Prototyping'],
       tools: ['Figma', 'Miro', 'Notion'],
       image: 'https://res.cloudinary.com/doczdljac/image/upload/v1781079859/tuplat_qvzjko.png',
-      projectUrl: '[AGREGAR_URL_TUPLATA]' // Reemplazar con URL de Behance, Figma o caso de estudio
+      projectUrl: 'https://youtu.be/rJlHBowt18Q'
     },
     {
       id: 2,
       title: 'Uber UI Design System',
-      category: 'Design Systems',
-      description: 'Proyecto universitario enfocado en la creación de un sistema de diseño escalable. Incluye foundations, componentes, patrones y criterios de accesibilidad.',
+      category: 'Proyecto Académico – Design System',
+      description: 'Proyecto académico enfocado en la construcción y documentación de un Design System utilizando Figma, incluyendo foundations, componentes reutilizables y lineamientos visuales para interfaces digitales.',
       roles: ['UI Design', 'Design Systems', 'Accessibility', 'Documentation'],
       tools: ['Figma'],
       image: 'https://res.cloudinary.com/doczdljac/image/upload/v1781079442/descarga_zburhw.png',
-      projectUrl: '[AGREGAR_URL_UBER_DESIGN_SYSTEM]' // Reemplazar con URL de Figma, Behance o portfolio
+      projectUrl: 'https://zeroheight.com/4643a3976'
     },
     {
       id: 3,
       title: 'Planea',
-      category: 'Investigación y Producción Audiovisual',
+      category: 'Investigación, Diseño de Interfaces y Producción Audiovisual',
       description: 'Proyecto enfocado en investigación de herramientas digitales y producción audiovisual para comunicación efectiva.',
       roles: ['Research', 'Video Editing', 'Communication', 'Digital Content'],
       tools: ['Adobe Premiere', 'Figma', 'Notion'],
       image: 'https://res.cloudinary.com/doczdljac/image/upload/v1781079864/Planea_keknws.png',
-      projectUrl: '[AGREGAR_URL_PLANEA]' // Reemplazar con URL de YouTube, Vimeo o portafolio
+      projectUrl: 'https://www.behance.net/gallery/239046591/Planea-Organiza-proyecta-y-avanza'
     }
   ],
 

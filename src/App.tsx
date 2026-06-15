@@ -1,6 +1,7 @@
 import { Navbar, Footer } from './components'
 import {
   HeroSection,
+  VideoSection,
   AboutSection,
   SkillsSection,
   ProjectsSection,
@@ -18,6 +19,7 @@ function App() {
       {/* Main content */}
       <main>
         <HeroSection />
+        <VideoSection />
         <AboutSection />
         <SkillsSection />
         <ProjectsSection />
